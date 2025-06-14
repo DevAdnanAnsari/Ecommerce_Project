@@ -1,15 +1,18 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "Ecommerce_Project/client/package.json",
-            "use": "@vercel/static-build"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/Ecommerce_Project/client/build/$1"
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "Ecommerce_Project/client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "Ecommerce_Project/client/build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/Ecommerce_Project/client/build/$1"
+    }
+  ]
 }
